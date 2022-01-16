@@ -1,0 +1,11 @@
+- name: testing
+  hosts: all
+  tasks:
+
+    - name: Copy file
+      ansible.builtin.copy:
+        src: /home/ans/test/test.txt
+        dest: /home/ans/
+        owner: ans
+        group: ans
+        mode: '0644'
