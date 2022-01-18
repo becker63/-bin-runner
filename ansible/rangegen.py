@@ -1,7 +1,4 @@
 #!/usr/bin/python
-#range = input("enter address range: ")
-import json
-from netaddr import IPNetwork
 import os
 import nmap
 
